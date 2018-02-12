@@ -1,0 +1,612 @@
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/hp/.git/
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~ (master)
+$ ls
+'3D Objects'/         IntelGraphicsProfiles/   ntuser.dat.LOG2                                                                               'Saved Games'/
+ AppData/             Links/                   NTUSER.DAT{be789146-e8c2-11e7-9125-6cc217e1f262}.TM.blf                                        Searches/
+'Application Data'@  'Local Settings'@         NTUSER.DAT{be789146-e8c2-11e7-9125-6cc217e1f262}.TMContainer00000000000000000001.regtrans-ms   SendTo@
+ Contacts/            MicrosoftEdgeBackups/    NTUSER.DAT{be789146-e8c2-11e7-9125-6cc217e1f262}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@
+ Cookies@             Music/                   ntuser.ini                                                                                     Templates@
+ Desktop/            'My Documents'@           OneDrive/                                                                                      Videos/
+ Documents/           NetHood@                 Pictures/                                                                                      workspace/
+ Downloads/           NTUSER.DAT               PrintHood@
+ Favorites/           ntuser.dat.LOG1          Recent@
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~ (master)
+$ cd
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~ (master)
+$ cd New folder
+bash: cd: too many arguments
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~ (master)
+$ cd desktop
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop (master)
+$ cd fol
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ pwd
+/c/Users/hp/desktop/fol
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ ls
+ 1.txt  'New Text Document (2).txt'  'New Text Document (3).txt'
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add .
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   1.txt
+        new file:   New Text Document (2).txt
+        new file:   New Text Document (3).txt
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ working copy > staging area >repository
+bash: working: command not found
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "one"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'hp@DESKTOP-Q0TAE6M.(none)')
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git config --global user.name "mohamed magdy"
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ ^C
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git config --global user.email "mohammedmagdy989@ymail.com"
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "one"
+[master (root-commit) deec228] one
+ 3 files changed, 187 insertions(+)
+ create mode 100644 1.txt
+ create mode 100644 New Text Document (2).txt
+ create mode 100644 New Text Document (3).txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rim New Text Document (2).txt
+bash: syntax error near unexpected token `('
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rm New Text Document (2).txt
+bash: syntax error near unexpected token `('
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rm New Text Document(2).txt
+bash: syntax error near unexpected token `('
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rm f2
+fatal: pathspec 'f2' did not match any files
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rm New Text Document(2)
+bash: syntax error near unexpected token `('
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "two"
+On branch master
+Changes not staged for commit:
+        deleted:    1.txt
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+
+Untracked files:
+        f1.txt
+        f2.txt
+        f3.txt
+        repository
+        staging
+
+no changes added to commit
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ ^C
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "two"
+On branch master
+Changes not staged for commit:
+        deleted:    1.txt
+        deleted:    New Text Document (2).txt
+
+Untracked files:
+        New Text Document (2)..txt
+        f1.txt
+        repository
+        staging
+
+no changes added to commit
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add 1.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "two"
+[master b815471] two
+ 1 file changed, 32 deletions(-)
+ delete mode 100644 1.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git comit "one"
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        f1.txt
+        f2.txt
+        f3.txt
+        repository
+        staging
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add f1.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add f2.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add f3.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "un"
+[master 23ef5dc] un
+ 3 files changed, 187 insertions(+)
+ create mode 100644 f1.txt
+ create mode 100644 f2.txt
+ create mode 100644 f3.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        repository
+        staging
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ ^C
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        repository
+        staging
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ working copy > staging area > repository
+bash: working: command not found
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add -A
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+        new file:   repository
+        new file:   staging
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git rm f2.txt
+rm 'f2.txt'
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "delete file 2"
+[master 375cfd7] delete file 2
+ 5 files changed, 255 deletions(-)
+ delete mode 100644 New Text Document (2).txt
+ delete mode 100644 New Text Document (3).txt
+ delete mode 100644 f2.txt
+ create mode 100644 repository
+ create mode 100644 staging
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ ls
+f1.txt  f3.txt  repository  staging
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git log
+commit 375cfd724873950cc1f6a0435fbfffd1e551e66e (HEAD -> master)
+Author: mohamed magdy <mohammedmagdy989@ymail.com>
+Date:   Sun Feb 11 14:58:47 2018 +0200
+
+    delete file 2
+
+commit 23ef5dc7548f98db4d0057ab6ead0f436bb1bfd5
+Author: mohamed magdy <mohammedmagdy989@ymail.com>
+Date:   Sun Feb 11 14:52:37 2018 +0200
+
+    un
+
+commit b815471373e732ca420dba791dbbfae151918271
+Author: mohamed magdy <mohammedmagdy989@ymail.com>
+Date:   Sun Feb 11 14:49:08 2018 +0200
+
+    two
+
+commit deec228fbda2cb8a0bf679814f8ef8d0f47076d4
+Author: mohamed magdy <mohammedmagdy989@ymail.com>
+Date:   Sun Feb 11 13:41:12 2018 +0200
+
+    one
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git revert b815471373e732ca420dba791dbbfae151918271
+[master 464c927] Revert "two"
+ 1 file changed, 32 insertions(+)
+ create mode 100644 1.txt
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git diff
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git remote add individual https://github.com/mohamedmagdynady/individual.git
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git remote -v
+individual      https://github.com/mohamedmagdynady/individual.git (fetch)
+individual      https://github.com/mohamedmagdynady/individual.git (push)
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push -u individual
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream individual master
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git clone https://github.com/mohamedmagdynady/individual.git
+Cloning into 'individual'...
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push -u individual
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream individual master
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        individual/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git add .
+warning: adding embedded git repository: individual
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> individual
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached individual
+hint:
+hint: See "git help submodule" for more information.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push -u individual
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream individual master
+
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ touch README
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git commit -m "add readme"
+[master c5c52b4] add readme
+ 1 file changed, 1 insertion(+)
+ create mode 160000 individual
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git remote add origin https://github.com/mohamedmagdynady/individual.git
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ git push -u origin master
+To https://github.com/mohamedmagdynady/individual.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/mohamedmagdynady/individual.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol (master)
+$ cd individual
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git remote add origin https://github.com/mohamedmagdynady/individual.git
+fatal: remote origin already exists.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git remote add origin https://github.com/mohamedmagdynady/individual
+fatal: remote origin already exists.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git remote set-url origin https://github.com/mohamedmagdynady/individual
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push --set-upstream individual master
+fatal: 'individual' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git log
+commit a151348c07744440d17203382557b91b48ceaafa (HEAD -> master, origin/master, origin/HEAD)
+Author: mohamedmagdynady <36204854+mohamedmagdynady@users.noreply.github.com>
+Date:   Sun Feb 11 11:49:48 2018 +0200
+
+    Add files via upload
+
+commit 6b03a9eb0c5b1f8da61dfb4b44dd42948dc158e2
+Author: mohamedmagdynady <36204854+mohamedmagdynady@users.noreply.github.com>
+Date:   Sun Feb 11 11:44:07 2018 +0200
+
+    Create AllMyCommands.txt
+
+commit f6b470ad6952443f583ac5e0f86bbf76eb03cd5d
+Author: mohamedmagdynady <36204854+mohamedmagdynady@users.noreply.github.com>
+Date:   Sat Feb 10 18:44:24 2018 +0200
+
+    Initial commit
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git remote
+origin
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push --set-upstream origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git pull origin --allow-unrelated-histories
+Already up to date.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push origin master
+Everything up-to-date
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ touch README.md
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git branch ReadMe
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git branch
+  ReadMe
+* master
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (ReadMe)
+$ git add README.md
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (ReadMe)
+$ git commit -m"add README.MD TO readme branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (ReadMe)
+$ git commit -m "add readme.md to readme branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (ReadMe)
+$ git branch
+* ReadMe
+  master
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git merge ReadMe
+Already up to date.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git commit -m "merge branch"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git remote set-url origin https://github.com/mohamedmagdynady/individual.git
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push --set-upstream origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git pull origin master --allow-unrelated-histories
+From https://github.com/mohamedmagdynady/individual
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
+$ git push origin master
+Everything up-to-date
+
+hp@DESKTOP-Q0TAE6M MINGW64 ~/desktop/fol/individual (master)
